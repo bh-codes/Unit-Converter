@@ -10,29 +10,27 @@ const length = document.getElementById("length-convert")
 const volume = document.getElementById("volume-convert")
 const mass = document.getElementById("mass-convert")
 const modeBtn = document.getElementById("mode")
-const metricContainer = document.querySelector("#metric-container")
+const metricContainer = document.getElementsByClassName("metric-light")
+const metricHeader = document.getElementsByClassName("metric-header")
+
+console.log(metricHeader)
 
 modeBtn.addEventListener("click", function() {
     if (body.classList.contains("light-mode")) {
-        modeBtn.innerText = "Light"
+        modeBtn.innerText = "☀️"
         body.classList.remove("light-mode")
         body.classList.add("dark-mode")
-                
-        metricContainer.classList.remove("unit-light")
-        metricContainer.classList.add("unit-dark")
-       
     } else {
         body.classList.remove("dark-mode")
         body.classList.add("light-mode")
-        modeBtn.innerText = "Dark"
-        metricContainer.classList.add("unit-light")
-        metricContainer.classList.remove("unit-dark")
+        modeBtn.innerText = "🌙"
     }
 })
 
 button.addEventListener("click", function(e) {
     e.preventDefault()
     const digit = input.value
+    input.value = ""
     
     const convertMeter = (digit * 3.28084).toFixed(3)
     const convertFeet = (digit / 3.28084).toFixed(3)
