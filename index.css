@@ -102,6 +102,15 @@ textarea {
      background-color: #1F2937;
    }
 
+   #mode {
+     border-radius: 5px;
+     border: none;
+     display: flex;
+     margin: 15px;
+     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+     background-color: #6943FF;
+   }
+
    header {
      color: white;
      background-color: #6943FF;
@@ -114,7 +123,6 @@ textarea {
    }
 
    h1 {
-     padding-top: 15px;
      font-size: 28px;
      line-height: 38px;
      font-weight: 800;
@@ -138,7 +146,6 @@ textarea {
      line-height: 24px;
      color: white;
      text-align: center;
-     margin: 10px 0;
    }
 
    #convert-btn {
@@ -155,11 +162,7 @@ textarea {
      line-height: 24px;
    }
 
-   .light-mode {
-     background-color: #F4F4F4;
-   }
-
-   #metric-container {
+   .metric-light {
      background-color: white;
      width: 500px;
      height: 110px;
@@ -170,12 +173,9 @@ textarea {
      flex-flow: column;
    }
 
-   .unit-light {
-     background-color: white;
-   }
-
-   .unit-dark {
+   .metric-dark {
      background-color: #273549;
+     color: white;
    }
 
    h3, p {
